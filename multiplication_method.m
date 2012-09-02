@@ -12,7 +12,7 @@ lpf = ones(1,16);
 lpf = lpf/length(lpf);
 freqz(lpf)
 %Noise Constant
-n = 0.1;
+n = 0.2;
 %Delay
 delay = 0.5e-9;
 %Constants for Schmitt Trigger
@@ -58,24 +58,24 @@ title('Inverse of Filtered Multiplied Signal')
 figure(4)
 plot(findTime, 'g')
 title('Time')
-%Schmitt Trigger
-for i = 2:length(filteredMultipleSignal)
-    if(binaryFilteredMultipleSignal(i-1) == 1)
-        if(filteredMultipleSignal(i) < thr_low)
-            binaryFilteredMultipleSignal(i) = 0;
-        else
-            binaryFilteredMultipleSignal(i) = 1;
-        end
-    else
-        if(filteredMultipleSignal(i)>thr_high)
-            binaryFilteredMultipleSignal(i)=1;
-        else
-            binaryFilteredMultipleSignal(i)=0;
-        end
-    end
-end   
-
-figure(5)
-plot(binaryFilteredMultipleSignal, 'b')
-title('Schmitt Triggered Multiplied Signal')
+% %Schmitt Trigger
+% for i = 2:length(filteredMultipleSignal)
+%     if(binaryFilteredMultipleSignal(i-1) == 1)
+%         if(filteredMultipleSignal(i) < thr_low)
+%             binaryFilteredMultipleSignal(i) = 0;
+%         else
+%             binaryFilteredMultipleSignal(i) = 1;
+%         end
+%     else
+%         if(filteredMultipleSignal(i)>thr_high)
+%             binaryFilteredMultipleSignal(i)=1;
+%         else
+%             binaryFilteredMultipleSignal(i)=0;
+%         end
+%     end
+% end   
+% 
+% figure(5)
+% plot(binaryFilteredMultipleSignal, 'b')
+% title('Schmitt Triggered Multiplied Signal')
 
