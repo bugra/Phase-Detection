@@ -13,7 +13,7 @@ fc_down = 68e6;
 lpf = ones(1, 16);
 lpf = lpf / length(lpf);
 %Noise Coefficient
-n = 0.1;
+n = 0.2;
 thr_high = 0.5;
 thr_low = thr_high * 0.8;
 %Delay
@@ -99,7 +99,7 @@ for i = 2:(length(x1_dc_lpf_sql))
 end
 
 totalCounter = differenceFirstSignalCounter + differenceSecondSignalCounter + oneCounter + zeroCounter;
-phaseLag = differenceFirstSignalCounter / totalCounter;
+phaseLag = differenceFirstSignalCounter / totalCounter
 timeDelay = phaseLag / (fc)
 
 %DEBUG PURPOSES

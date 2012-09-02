@@ -51,7 +51,7 @@ inverseofFilteredMultipleSignal = acos(filteredMultipleSignal);
 %need to divide by 2*pi*fc
 findTime = inverseofFilteredMultipleSignal / (2 * pi * fc);
 
-delayTime = abs(mean(findTime))
+delayTime = abs(mean(findTime(50:end)))
 figure(3)
 plot(inverseofFilteredMultipleSignal, 'r')
 title('Inverse of Filtered Multiplied Signal')

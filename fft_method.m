@@ -11,7 +11,7 @@ fc = 70e6;
 lpf = ones(1,16);
 lpf = lpf/length(lpf);
 %noise coefficient
-n = 0;
+n = 0.2;
 %First Signal
 x1= cos(2 * pi * fc * t) + (n * randn(1, length(t)));
 %Delay
