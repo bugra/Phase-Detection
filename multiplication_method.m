@@ -32,7 +32,7 @@ title('Signals')
 multipleofTwoSignals = x1 .* x2;
 
 %1/2 cos(x+y)          1/2 cos(x-y)
-%1/2 cos(4*pi*fc*(t+delay)    1/2 cos(2*pi*fc*delay)
+%1/2 cos(2*pi*fc*(2*t+delay)    1/2 cos(2*pi*fc*delay)
 %Applying filter to multiple of two signals in order to get 
 %low frequency component
 %To erase the coefficient of 1/2 in the multiplication
